@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+    <link rel="stylesheet" href="css/commonStyle.css">
+    <link rel="stylesheet" href="css/rules.css">
+</head>
+<body>
+
+
+    
+    <div id="rules_container">
+        <h1 class="purple_center">Next Station: Budapest</h1>
+        <h2 class="purple_center">Game Rules</h2>
+
+        <h3>How to Play</h3>
+        <p><strong>Controls:</strong></p>
+        <ul>
+            <li><strong>Building Segments:</strong> Click on a station at the end of your line to select it, then click on another valid station to draw a metro segment between them</li>
+            <li><strong>Draw Card:</strong> Click the "Draw Card" button to draw a new card without building</li>
+            <li><strong>Skip Turn:</strong> Click "Skip Turn" to advance to the next turn without drawing or building</li>
+        </ul>
+        <p><strong>Quick Rules:</strong> Build straight lines (horizontal, vertical, or 45° diagonal) from the ends of your metro line to stations matching your current card letter.</p>
+
+
+            <h3>Objective</h3>
+            <p>Build Budapest's metro network across 4 lines to score the most points by connecting districts, crossing the Danube, and creating busy interchanges.</p>
+       
+
+        
+            <h3>Game Flow</h3>
+            <ul>
+                <li><strong>4 Rounds</strong> - One for each metro line (M1/yellow, M2/red, M3/blue, M4/green)</li>
+                <li><strong>Random Order</strong> - Line sequence is randomized each game</li>
+                <li><strong>8 Cards per Round</strong> - Draw station cards to build your line</li>
+                <li>Game ends after all 4 rounds are completed</li>
+            </ul>
+     
+
+        
+            <h3>Building Rules</h3>
+           
+                
+                    <h4>First Segment</h4>
+                    <p>Must start from the line's designated starting station</p>
+                
+                
+                    <h4>Subsequent Segments</h4>
+                    <p>Must extend from either end of your existing line</p>
+               
+                
+                    <h4>Movement</h4>
+                    <p>Straight lines only: horizontal, vertical, or 45° diagonal</p>
+                
+                    <h4>No Crossings</h4>
+                    <p>Segments cannot cross except at stations</p>
+               
+                    <h4>No Revisiting</h4>
+                    <p>Cannot return to stations already on your line</p>
+                
+               
+                    <h4>No Parallels</h4>
+                    <p>Only one segment allowed between any two stations (across all rounds)</p>
+
+
+       
+            <h3>Station Cards</h3>
+
+                    <h4>A, B, C, D Cards</h4>
+                    <p>Connect to stations with matching letters</p>
+
+                    <h4>Joker Cards (?)</h4>
+                    <p>Connect to any station type (also, Deák tér station is a wild/joker station)</p>
+
+
+                    <h4>Card Deck</h4>
+                    <p>The deck contains 10 cards: A, B, C, D, and ? (Joker).</p>
+
+
+ 
+            <h3>Scoring System</h3>
+
+                    <h4>Round Score (FP)</h4>
+                    <p><strong>FP = (PK × PM) + PD</strong></p>
+                    <ul>
+                        <li><strong>PK</strong> - Number of different districts touched by the line</li>
+                        <li><strong>PM</strong> - Maximum stations in any single district</li>
+                        <li><strong>PD</strong> - Number of Danube crossings (segments connecting Buda to Pest)</li>
+                    </ul>
+
+                    <h4>Final Bonuses</h4>
+                    <ul>
+                        <li><strong>Train Stations (PP)</strong> - Points based on how many train stations you connected: 0→0pts, 1→1pt, 2→2pts, 3→4pts, 4→6pts, 5→8pts, 6→11pts, 7→14pts, 8→17pts, 9→21pts, 10+→25pts</li>
+                        <li><strong>Interchanges</strong> - Stations where multiple lines meet: 2 lines=2pts each, 3 lines=5pts each, 4 lines=9pts each</li>
+                    </ul>
+
+        
+
+       
+            <h3>Final Score</h3>
+            <p><strong>
+                Total Score = Sum(all round FP scores) + PP + (2 × P2) + (5 × P3) + (9 × P4)
+            </strong></p>
+            <p>Where:</p>
+            <ul>
+                <li><strong>Sum(FP)</strong> - Total of all 4 round scores</li>
+                <li><strong>PP</strong> - Train station points from the sliding scale</li>
+                <li><strong>P2</strong> - Number of 2-line interchange stations</li>
+                <li><strong>P3</strong> - Number of 3-line interchange stations</li>
+                <li><strong>P4</strong> - Number of 4-line interchange stations</li>
+            </ul>
+     
+
+            <a href="index.html"><button id="backBtn" class="purple_btn">Back to Menu</button></a>
+
+    </div>
+
+</body>
+</html>

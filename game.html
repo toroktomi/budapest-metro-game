@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Grid</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="game_area">
+        <div class="game_board_section">
+            <div class="game_info purple_box">
+                <div class="info_item"><strong>Player:</strong> <span id="player_name">Player</span></div>
+                <div class="info_item"><strong>Time:</strong> <span id="timer">00:00</span></div>
+                <div class="info_item"><strong>Score:</strong> <span id="score_value">0</span></div>
+                <div class="info_item"><strong>Rounds:</strong> <span id="round_scores">-</span></div>
+                <div class="info_item"><strong>Trains:</strong> <span id="train_score">0</span></div>
+            </div>
+            <div class="grid_container purple_box" id="grid_container"></div>
+        </div>
+        <div class="card_indicator purple_box">
+            <div class="round_display">
+                <h3>Round</h3>
+                <div class="round_content purple_box">
+                    <span id="round_value">1/4</span>
+                </div>
+                <div class="round_order" id="round_order">
+                    <div class="round_indicator" data-round="1"></div>
+                    <div class="round_indicator" data-round="2"></div>
+                    <div class="round_indicator" data-round="3"></div>
+                    <div class="round_indicator" data-round="4"></div>
+                </div>
+                <div class="start_station_display">Start: <span id="start_station">-</span></div>
+            </div>
+            <div class="current_card">
+                <h3>Current Card</h3>
+                <div class="card_content purple_box"><span id="card_type">A</span></div>
+                <p class="turn_info">Turn <span id="turn_value">1/8</span></p>
+                <button id="draw_card_btn" class="draw_btn">Draw Card</button>
+                <button id="skip_turn_btn" class="skip_btn">Skip Turn</button>
+            </div>
+            <div class="train_tracker">
+                <h3>Train Station Tracker</h3>
+                <div class="train_scale">
+                    <div class="train_marker" id="train_marker"></div>
+                    <div class="train_labels">
+                        <span>0</span><span>1</span><span>2</span><span>4</span><span>6</span><span>8</span><span>11</span><span>14</span><span>17</span><span>21</span><span>25</span>
+                    </div>
+                </div>
+                <p class="train_points_info">Points: <span id="train_points">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
