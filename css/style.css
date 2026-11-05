@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, purple, white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.purple_box {
+    background-color: white;
+    border: 2px solid purple;
+    border-radius: 8px;
+}
+.game_area {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.game_board_section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game_info {
+    padding: 10px 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    box-sizing: border-box;
+}
+.info_item {
+    font-size: 14px;
+    color: purple;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.grid_container {
+    width: 600px;
+    height: 600px;
+    flex-shrink: 0;
+}
+.card_indicator {
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.current_card h3, .round_display h3, .train_tracker h3 {
+    margin: 0 0 8px 0;
+    color: purple;
+    font-size: 14px;
+    font-weight: bold;
+}
+.card_content, .round_content {
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_content {
+    padding: 30px;
+    min-height: 60px;
+    margin-bottom: 15px;
+}
+
+#card_type, #round_value {
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+}
+
+#card_type {
+    font-size: 32px;
+}
+
+/* Buttons */
+.draw_btn, .skip_btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+.draw_btn {
+    background-color: purple;
+    color: white;
+}
+
+.draw_btn:hover {
+    background-color: #6a0dad;
+}
+
+.skip_btn {
+    background-color: white;
+    color: purple;
+    border: 2px solid purple;
+    margin-top: 10px;
+}
+
+.skip_btn:hover {
+    background-color: #faf5ff;
+}
+
+.draw_btn:disabled, .skip_btn:disabled {
+    background-color: #ccc;
+    color: #666;
+    border-color: #999;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* SVG stuff */
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.grid_line {
+    stroke: #ddd;
+    stroke-width: 1;
+}
+
+
+.node {
+    cursor: pointer;
+}
+
+.node.selected {
+    fill: #9b59b6 !important;
+}
+
+.node.valid_destination {
+    filter: drop-shadow(0 0 2px rgba(128, 0, 128, 1));
+}
+
+.node.start_station {
+    stroke: purple;
+    stroke-width: 1.5;
+    stroke-opacity: 0.8;
+}
+
+.node_text {
+    fill: white;
+    font-size: 5px;
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.connection_line {
+    stroke-width: 3;
+}
+
+.river {
+    fill: none;
+    stroke: #3498db;
+    stroke-width: 2;
+    stroke-opacity: 0.8;
+}
+
+.train_indicator, .train_emoji {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Display sections */
+.round_display, .current_card {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.start_station_display {
+    font-size: 14px;
+    color: purple;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #faf5ff;
+}
+
+#start_station {
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Train tracker */
+.train_tracker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.train_tracker p {
+    margin: 3px 0;
+    font-size: 12px;
+}
+
+.train_scale {
+    position: relative;
+    height: 20px;
+    background: #ddd;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.train_marker {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 10%;
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    transition: left 0.3s ease;
+}
+
+.train_labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.train_labels span {
+    flex: 1;
+    text-align: center;
+}
+
+/* Round indic*/
+.round_order {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.round_indicator {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid purple;
+    background-color: white;
+}
+
+
+.round_indicator.current {
+    border: 3px solid purple;
+    box-shadow: 0 0 5px rgba(128,0,128,0.5);
+}
+.round_indicator.completed {
+    opacity: 0.6;
+}
+
+.turn_info {
+    margin: 8px 0;
+    font-size: 12px;
+}
+
+.train_points_info {
+    margin-top: 5px;
+    font-size: 12px;
+}

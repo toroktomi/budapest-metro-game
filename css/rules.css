@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(to bottom, purple, white);
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#rules_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    color: purple;
+    border: 3px solid purple;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(128, 0, 128, 0.3);
+    line-height: 1.6;
+}
+
+#rules_container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.2);
+}
+
+#rules_container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid purple;
+    padding-bottom: 10px;
+}
+
+
+#rules_container h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: purple;
+    border-left: 4px solid purple;
+    padding-left: 15px;
+}
+
+#rules_container h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #6a0dad;
+    font-weight: bold;
+}
+
+#rules_container p {
+    margin: 10px 0;
+    color: #333;
+}
+#rules_container ul {
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+#rules_container li {
+    margin: 8px 0;
+    color: #333;
+}
+#rules_container strong {
+    color: purple;
+}
+#backBtn {
+    margin-top: 30px;
+    cursor: pointer;
+}
